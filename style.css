@@ -46,7 +46,7 @@ a:hover {
 .carousel {
   width: 100vw;
   height: 100vh;
-  margin-top: -50px;
+  margin-top: 100px;
   overflow: hidden;
   position: relative;
 }
@@ -234,7 +234,7 @@ a:hover {
   height: 4px;
   background-color: #14ff72cb;
   left: 0;
-  top: 0;
+  bottom: 0;
   animation: runningTime 7s linear 1 forwards;
 }
 
@@ -248,32 +248,6 @@ a:hover {
 }
 
 /* Adjust the school logo/badge and spacing between the school name vertically */
-.navbar-badge {
-  width: 150px; /* Set the desired width of the badge */
-  height: auto; /* Keep the aspect ratio */
-  margin-right: 10px; /* Add space between the badge and the text */
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 0.7;
-}
-
-.school-name {
-  font-size: 1.2rem; /* Adjust font size for the school name */
-  font-weight: bold;
-}
-
-.school-subname {
-  font-size: 1rem; /* Adjust font size for the subtitle */
-}
-.school-motto {
-  font-size: 1rem;
-  color: yellow;
-  font-style: italic;
-}
 
 /* badge at the lower part of the page */
 .navbar-badge-footer {
