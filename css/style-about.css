@@ -1,0 +1,69 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  padding-top: 200px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.icon {
+  font-size: 40px;
+  color: #2980b9;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.timeline {
+  margin-top: 20px;
+  padding: 10px;
+  border-left: 2px solid #2980b9;
+}
+
+.event {
+  margin-left: 20px;
+  padding: 5px 0;
+}
+
+.event span {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 30%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
