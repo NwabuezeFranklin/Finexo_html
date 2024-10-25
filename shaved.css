@@ -1,0 +1,202 @@
+/* Fix the navbar section to make sure it covers the full width and touches the
+top */
+.header_section {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container-fluid {
+  padding-left: 0 !important; /* Remove padding on the left side */
+  padding-right: 0 !important;
+  /* Ensure no extra padding on the right side */
+  margin: 0;
+  width: 100vw; /*
+Ensure the container stretches across the entire width */
+} /* Custom Navbar
+Styling */
+.custom_nav-container {
+  padding: 0;
+  margin: 0; /* Ensure no margins
+on the sides */
+  width: 100vw; /* Span the full width of the viewport */
+  background-color: #ffee6b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0 !important;
+  right: 0;
+  z-index: 999;
+} /* Stretch the
+navbar content to the full width */
+.navbar {
+  width: 100% !important; /* Ensure
+the navbar content spans the full width */
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+.navbar-badge {
+  width: 150px; /* Keep
+the badge size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.7;
+}
+.school-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+.school-subname {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+.school-motto {
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+} /* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .navbar-badge {
+    width: 100px; /* Reduce badge size on mobile */
+    height: auto;
+  }
+  .brand-text {
+    line-height: 0.7; /* Reduce line height for smaller screens */
+  }
+  .school-name {
+    font-size: 1.2rem; /* Reduce font size for mobile screens */
+  }
+  .school-subname {
+    font-size: 1rem; /* Adjust subtitle font size */
+  }
+  .school-motto {
+    font-size: 0.8rem; /* Make the motto smaller */
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar-badge {
+    width: 100px; /* Further reduce
+the badge size for very small screens */
+  }
+  .school-name {
+    font-size: 1rem; /*
+Further reduce font size */
+  }
+  .school-subname {
+    font-size: 0.9rem;
+  }
+  .school-motto {
+    font-size: 0.7rem;
+  }
+} /* Adjust navbar content alignment */
+.custom_nav-container .navbar-nav {
+  margin-left: auto; /* Push navbar items to
+the right */
+  padding-right: 15px; /* Add a bit of padding to the right */
+}
+.custom_nav-container .navbar-toggler:focus {
+  outline: none; /* Removes the
+default focus outline */
+  box-shadow: none; /* Removes any box-shadow that may
+appear */
+  border: none; /* Removes the border when clicked */
+} /* Navbar for
+smaller screens */
+@media screen and (max-width: 999px) {
+  .navbar {
+    padding-left: 0 !important; /* Remove left padding */
+    padding-right: 0 !important; /* Ensure no extra padding on the right */
+  }
+}
+.custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 5px 20px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.custom_nav-container .navbar-nav .nav-item:hover .nav-link,
+.custom_nav-container .navbar-nav .nav-item.active .nav-link {
+  color: #00bbf0;
+}
+.custom_nav-container .navbar-nav .nav-item.active .nav-link {
+  font-weight: 600;
+} /* Fix the search button on the navbar */
+.custom_nav-container .nav_search-btn {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  color: #ffffff;
+} /* Restore the original toggle button design and fix its position */
+/* Restore the original toggle button design */ /* shifting the toggle button
+from far right */
+.custom_nav-container .navbar-toggler {
+  padding: 0;
+  width: 37px;
+  height: 42px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  right: 50px;
+}
+.custom_nav-container .navbar-toggler span {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 7px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  border-radius: 5px;
+}
+.custom_nav-container .navbar-toggler span::before,
+.custom_nav-container .navbar-toggler span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  top: -10px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.custom_nav-container .navbar-toggler span::after {
+  top: 10px;
+}
+.custom_nav-container .navbar-toggler[aria-expanded='true'] span {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.custom_nav-container .navbar-toggler[aria-expanded='true'] span::before,
+.custom_nav-container .navbar-toggler[aria-expanded='true'] span::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+} /* Add
+margin to body content to avoid hiding it under the navbar */
+body {
+  margin-top: 150px; /* Adjust according to the navbar height */
+  padding: 0;
+}
+
+/* the above is for a fixed navbar */
+
+/* next */
