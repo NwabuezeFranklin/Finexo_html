@@ -70,19 +70,19 @@ a:hover {
 }
 
 /* Centralize the content and make it responsive on smaller screens */
-.carousel .list .item .content {
+/* .carousel .list .item .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(
     -50%,
     -50%
-  ); /* Center content horizontally and vertically */
-  /* Center text within the content area */
-  width: 70%; /* Adjust width to be responsive */
+  ); 
+  text-align: center; 
+  width: 70%; 
   max-width: 400px;
   padding: 10px;
-}
+} */
 
 .carousel .list .item:nth-child(1),
 .carousel .list .item:nth-child(2) {
@@ -523,13 +523,253 @@ a:hover {
     font-size: 1.2rem;
   }
 }
+
+/* for stats display */
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.stat {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.stat.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 40px;
+  color: #5000da;
+  margin-bottom: 10px;
+}
+
+.stat-icon i {
+  display: inline-block;
+  font-size: 48px;
+  color: #4caf50; /* Adjust color as needed */
+}
+
+/* end of stats display */
+
+/* write ups on home page  mobile responsive act */
+
 @media screen and (max-width: 480px) {
-  /* Adjust font sizes for small screens */
+  /* Further adjust font sizes for very small screens */
   .content .title,
   .content .name {
-    font-size: 60px; /* Smaller font size for titles */
+    font-size: 48px; /* Smaller font size for titles and names */
   }
   .content .des {
-    font-size: 20px; /* Smaller font size for description */
+    font-size: 16px; /* Smaller font size for description */
+  }
+
+  /* Adjust margins and padding for better layout */
+  .content {
+    padding: 10px; /* Reduced padding to fit smaller screen */
+  }
+
+  /* Ensuring images or backgrounds scale well */
+  .carousel-section img,
+  .carousel-section .background-image {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Optimize layout for readability */
+  .carousel-section .slide-content {
+    padding: 8px; /* Reduced padding within carousel slides */
+    text-align: center; /* Center text for clarity */
+  }
+
+  /* Button adjustments */
+  .carousel-section .button {
+    font-size: 14px; /* Smaller font for buttons */
+    padding: 6px 12px; /* Adjust padding for buttons */
   }
 }
+
+@media screen and (max-width: 380px) {
+  /* Adjust font sizes for extra small screens */
+  .content .title,
+  .content .name {
+    font-size: 40px; /* Smaller font size for titles and names */
+  }
+  .content .des {
+    font-size: 12px; /* Smaller font size for description */
+    line-height: 1.4; /* Increase line spacing for readability */
+    text-align: left; /* Align text to the left */
+    overflow-wrap: break-word; /* Wrap text to prevent overflow */
+    margin-left: -9%;
+  }
+
+  /* Additional layout adjustments */
+  .content {
+    padding: 8px; /* Further reduce padding */
+  }
+
+  /* Responsive images and background settings */
+  .carousel-section img,
+  .carousel-section .background-image {
+    width: 100%; /* Ensure full-width scaling */
+    height: auto; /* Maintain image ratio */
+  }
+
+  /* Slide content padding and alignment */
+  .carousel-section .slide-content {
+    padding: 6px; /* Reduce padding for better fit */
+    text-align: center; /* Center-align for consistency */
+  }
+
+  /* Button styling adjustments */
+  .carousel-section .button {
+    font-size: 12px; /* Smaller font size for buttons */
+    padding: 5px 10px; /* Adjust padding for compact layout */
+  }
+
+  /* Adjust spacing between elements */
+  .content .section-spacing {
+    margin-bottom: 12px; /* Reduce space between sections */
+  }
+}
+
+/* write ups on home page  mobile responsive act */
+
+/* News Events Section  on home page*/
+
+.news-events-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 50px; /* Ensures space below this section */
+}
+
+.news-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.news-heading h2 {
+  font-size: 36px;
+  color: #00204a;
+}
+
+.news-heading p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Events Container */
+/* Ensure only one event card is visible at a time */
+.events-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow to show one card at a time */
+  height: 600px; /* Set a specific height for the container */
+}
+/* Individual Event Card */
+/* Individual Event Card */
+.event-card {
+  width: 100%;
+  max-width: 350px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  position: absolute; /* Position absolute for overlap */
+}
+
+.event-image {
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%; /* Ensure images take full width */
+  height: 200px; /* Set a specific height for the images */
+  object-fit: cover; /* Maintain aspect ratio and cover */
+  object-position: bottom; /* Anchor the image from the bottom */
+  border-radius: 15px 15px 0 0; /* Curved edges on top */
+}
+
+.event-content {
+  padding: 15px; /* Padding inside event card */
+}
+
+.event-title {
+  font-size: 20px;
+  color: #00204a;
+  margin-bottom: 10px;
+}
+
+.event-date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.event-date i {
+  margin-right: 5px;
+  color: #00204a;
+}
+
+.event-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.event-link {
+  color: #00204a;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #00204a;
+}
+
+.event-link:hover {
+  color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Responsive Styling */
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* 
+end of news event section home page */
+
+/* See more button on Nwes and event  */
+
+.see-more {
+  display: inline-block;
+  background-color: #209500; /* Button background color */
+  color: #ffffff; /* Button text color */
+  padding: 8px 15px; /* Spacing for the button */
+  font-size: 14px;
+  font-weight: bold;
+  /* border-radius: 5px; */
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* .see-more:hover {
+  background-color: #0056b3;
+} */
+/* Background color on hover */
