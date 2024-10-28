@@ -1,0 +1,83 @@
+.faq-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin: 15px 0;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #357abd;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  border-left: 4px solid #4a90e2;
+  border-radius: 0 5px 5px 5px;
+  margin-top: 10px;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* JavaScript controlled class for open state */
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-question span {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* FAQ Header Image Styles */
+.faq-header-image {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  margin-top: 20px; /* Add spacing as needed */
+}
+
+.faq-header-image img {
+  width: 100%; /* Makes the image full-width */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  border-radius: 8px; /* Optional: adds a rounded edge */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
