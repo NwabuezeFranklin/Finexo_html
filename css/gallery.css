@@ -1,0 +1,73 @@
+/* General gallery section styling */
+.gallery-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding-top: 170px;
+}
+
+.gallery-section h2 {
+  font-size: 36px;
+  color: #00204a;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Carousel styling */
+.gallery-item {
+  width: 300px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.carousel {
+  position: relative;
+  width: 150%;
+  height: 300px; /* Maintain a fixed height for consistent aspect ratio */
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the container without stretching */
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel img:first-child {
+  display: block;
+}
+
+/* Description styling */
+.gallery-description {
+  padding: 15px;
+  background-color: #00204a;
+  color: #fff;
+  text-align: left;
+  height: 160px; /* Fixed height for consistent layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-description h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+  line-height: 1.2;
+}
+
+.gallery-description p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.2;
+  max-height: 90px; /* Ensures consistent text length */
+  overflow: hidden;
+}
