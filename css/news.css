@@ -8,11 +8,10 @@ body {
   background-attachment: fixed; */
 }
 
-/* New News Events Section */
 .news-section-container {
   padding: 50px 20px;
   background-color: #f9f9f9; /* Light background for contrast */
-  padding-top: 200px;
+  padding-top: 170px;
 }
 
 .news-title-area {
@@ -86,16 +85,40 @@ body {
   margin-bottom: 15px;
 }
 
-.read-more-link {
-  color: #00204a;
-  font-weight: bold;
-  text-decoration: none;
-  border-bottom: 1px solid #00204a;
+/* Read More/Read Less toggle */
+.text-container {
+  position: relative;
+  max-height: 70px; /* Set max height for hidden content */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-.read-more-link:hover {
-  color: #0056b3;
-  border-color: #0056b3;
+.text-container.expanded {
+  max-height: 1000px; /* Large enough to reveal all content */
+}
+
+.read-more-toggle {
+  display: none; /* Hide checkbox */
+}
+
+.read-more-label {
+  color: #0066ec;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* Toggle content expansion */
+.read-more-toggle:checked + .text-container {
+  max-height: 1000px;
+}
+
+.read-more-toggle:checked + .text-container + .read-more-label::after {
+  content: ' Read Less'; /* Change to Read Less */
+}
+
+.read-more-label::after {
+  content: ' Read More'; /* Default label text */
 }
 
 /* Responsive Styling */
