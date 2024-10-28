@@ -6,7 +6,7 @@ var nextBtn = document.querySelector('.next'),
   runningTime = document.querySelector('.carousel .timeRunning')
 
 let timeRunning = 3000
-let timeAutoNext = 7000
+let timeAutoNext = 17000
 
 nextBtn.onclick = function () {
   showSlider('next')
@@ -26,7 +26,7 @@ function resetTimeAnimation() {
   runningTime.style.animation = 'none'
   runningTime.offsetHeight /* trigger reflow */
   runningTime.style.animation = null
-  runningTime.style.animation = 'runningTime 7s linear 1 forwards'
+  runningTime.style.animation = 'runningTime 17s linear 1 forwards'
 }
 
 function showSlider(type) {
@@ -140,3 +140,36 @@ showCard(currentIndex)
 
 // Change card every 5 seconds (5000 milliseconds)
 setInterval(cycleCards, 7000)
+
+// disappearing read me and read less button on the news page
+
+function toggleContent(event, contentId) {
+  event.preventDefault() // Prevent the default link behavior
+  const content = document.getElementById(contentId)
+  const toggleText = event.target.querySelector('.toggle-text')
+  const readMoreLink = event.target // Get the "Read More" link
+
+  if (content.style.display === 'none') {
+    content.style.display = 'block'
+    toggleText.textContent = 'Read Less' // Change to 'Read Less'
+    readMoreLink.style.display = 'none' // Hide the "Read More" link
+  } else {
+    content.style.display = 'none'
+    toggleText.textContent = 'Read More' // Change back to 'Read More'
+    readMoreLink.style.display = 'inline' // Show the "Read More" link again
+  }
+}
+
+function toggleContent(event, contentId, linkId) {
+  event.preventDefault()
+  const content = document.getElementById(contentId)
+  const link = document.getElementById(linkId)
+
+  if (content.style.display === 'none') {
+    content.style.display = 'inline'
+    link.textContent = 'Read Less'
+  } else {
+    content.style.display = 'none'
+    link.textContent = 'Read More'
+  }
+}
