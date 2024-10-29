@@ -34,6 +34,7 @@ h3 {
 
 p {
   margin: 10px 0;
+  font-size: 18px;
 }
 
 .contact-info,
@@ -73,4 +74,54 @@ p {
 
 .btn:hover {
   background-color: #003366;
+}
+
+/* General Contact Section Styling */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.contact-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Contact Item Styling */
+.contact-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.5;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  color: #0066cc;
+  margin-right: 8px;
+}
+
+.icon i {
+  font-size: 1.2em;
+}
+
+.faq-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.faq-link:hover {
+  text-decoration: underline;
 }
