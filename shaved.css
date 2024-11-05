@@ -200,3 +200,259 @@ body {
 /* the above is for a fixed navbar */
 
 /* next */
+
+/* General Responsive Settings */
+@media screen and (max-width: 480px) {
+  /* Navbar adjustments */
+  header nav a {
+    font-size: 12px;
+    margin-right: 0;
+    padding: 5px;
+  }
+
+  /* Resize school badge */
+  .navbar-badge {
+    width: 30px;
+    height: auto;
+  }
+
+  /* Resize school name */
+  .school-name {
+    font-size: 16px;
+  }
+
+  .school-subname {
+    font-size: 14px;
+  }
+
+  .school-motto {
+    font-size: 12px;
+  }
+
+  /* Adjust content in carousel */
+  .content .title,
+  .content .name {
+    font-size: 30px;
+  }
+
+  .content .des {
+    font-size: 14px;
+  }
+
+  .content .btn button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Carousel items */
+  .carousel .list .item {
+    width: 100px;
+    height: 150px;
+    left: 60%;
+  }
+
+  /* Timeline event font size adjustment */
+  .event span {
+    font-size: 12px;
+  }
+
+  .event p {
+    font-size: 10px;
+  }
+
+  /* Gallery image adjustments */
+  .gallery img {
+    width: 45%;
+  }
+
+  /* Welcome message font size */
+  .welcome-message {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* Footer font size adjustment */
+  .footer_section p {
+    font-size: 12px;
+  }
+}
+
+/* Adjustments for mid-size screens */
+@media screen and (max-width: 768px) {
+  /* Navbar adjustments */
+  header nav a {
+    font-size: 14px;
+  }
+
+  .school-name {
+    font-size: 18px;
+  }
+
+  .school-subname {
+    font-size: 16px;
+  }
+
+  .school-motto {
+    font-size: 14px;
+  }
+
+  /* Carousel adjustments */
+  .carousel .list .item {
+    width: 150px;
+    height: 200px;
+    left: 65%;
+  }
+
+  .content .title,
+  .content .name {
+    font-size: 40px;
+  }
+
+  .content .des {
+    font-size: 16px;
+  }
+
+  .content .btn button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  /* Timeline event font size */
+  .event span {
+    font-size: 14px;
+  }
+
+  .event p {
+    font-size: 12px;
+  }
+
+  /* Gallery image adjustments */
+  .gallery img {
+    width: 30%;
+  }
+
+  /* Welcome message adjustments */
+  .welcome-message {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+}
+
+/* Adjustments for larger tablets */
+@media screen and (min-width: 481px) and (max-width: 991px) {
+  /* Navbar adjustments */
+  header nav a {
+    font-size: 16px;
+  }
+
+  /* Adjust school badge */
+  .navbar-badge {
+    width: 40px;
+    height: auto;
+  }
+
+  /* School name font sizes */
+  .school-name {
+    font-size: 20px;
+  }
+
+  .school-subname {
+    font-size: 18px;
+  }
+
+  .school-motto {
+    font-size: 14px;
+  }
+
+  /* Carousel content */
+  .carousel .list .item {
+    width: 140px;
+    height: 180px;
+    left: 67%;
+  }
+
+  .content .title,
+  .content .name {
+    font-size: 50px;
+  }
+
+  .content .des {
+    font-size: 18px;
+  }
+
+  .content .btn button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Gallery image adjustments */
+  .gallery img {
+    width: 30%;
+  }
+
+  /* Welcome message font size */
+  .welcome-message {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 349px) {
+  /* Navbar adjustments */
+  header nav a {
+    font-size: 12px;
+    margin-right: 90px;
+  }
+
+  header nav {
+    margin-left: 400px; /* Adjust this value as needed */
+  }
+
+  /* Adjust school badge */
+  .navbar-badge {
+    width: 30px;
+    height: auto;
+  }
+
+  /* School name font sizes */
+  .school-name {
+    font-size: 16px;
+  }
+  .school-subname {
+    font-size: 14px;
+  }
+  .school-motto {
+    font-size: 12px;
+  }
+
+  /* Carousel content adjustments */
+  .carousel .list .item {
+    width: 100px;
+    height: 150px;
+    left: 60%;
+  }
+
+  .content .title,
+  .content .name {
+    font-size: 36px;
+  }
+
+  .content .des {
+    font-size: 14px;
+  }
+
+  .content .btn button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Gallery image adjustments */
+  .gallery img {
+    width: 45%;
+  }
+
+  /* Welcome message font size */
+  .welcome-message {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
