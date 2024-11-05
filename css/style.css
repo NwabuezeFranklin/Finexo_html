@@ -1108,3 +1108,33 @@ body {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+.info_social a {
+  color: inherit; /* This will use the default text color */
+  transition: color 0.3s; /* Add a transition effect for hover */
+}
+
+.info_social a:hover {
+  color: #000; /* Change color on hover, if desired */
+}
+
+/* Custom colors for each icon */
+.info_social a:nth-child(1) i {
+  /* Facebook */
+  color: #3b5998;
+}
+
+.info_social a:nth-child(2) i {
+  /* YouTube */
+  color: #ff0000;
+}
+
+.info_social a:nth-child(3) i {
+  /* Instagram */
+  color: #e1306c;
+}
+
+.info_social a:nth-child(4) i {
+  /* TikTok */
+  color: #010101; /* Adjust TikTok color as needed */
+}
