@@ -212,9 +212,9 @@ a:focus {
 }
 
 /* Responsive Adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1350px) {
   .navbar-badge {
-    width: 100px; /* Reduce badge size on mobile */
+    width: 120px; /* Reduce badge size on mobile */
     height: auto;
   }
 
@@ -297,7 +297,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 5px 20px;
+  padding: 5px 10px;
   color: #000000;
   text-align: center;
   text-transform: uppercase;
@@ -826,6 +826,10 @@ body {
   position: relative;
   z-index: 1;
   padding: 50px 20px;
+}
+
+.welcome_message_heading {
+  color: rgb(239, 79, 5);
 }
 
 /* Add the blurred background image */
