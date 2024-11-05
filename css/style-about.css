@@ -6,7 +6,7 @@ body {
   padding: 0;
   background-image: url('../images/22-min.jpg');
   background-size: cover;
-  background-position: center;
+
   background-attachment: fixed;
   padding-top: 200px;
 }
@@ -14,7 +14,6 @@ body {
 .container {
   width: 80%;
   margin: auto;
-  padding: 20px;
 }
 /* General styles for the three sections */
 .mission-box,
