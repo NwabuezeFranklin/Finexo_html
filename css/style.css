@@ -278,10 +278,10 @@ a:focus {
 
 @media screen and (max-width: 480px) {
   .navbar-badge {
-    width: 120px; /* Adjust badge size for this range */
+    width: 80px; /* Adjust badge size for this range */
   }
   .brand-text {
-    line-height: 0.5; /* Reduce line height for smaller screens */
+    line-height: 0.7; /* Reduce line height for smaller screens */
   }
   .school-name {
     font-size: 1.5rem; /* Reduce font size as needed */
@@ -298,6 +298,26 @@ a:focus {
   /* Adjust navbar links spacing if needed */
   header nav {
     padding-left: 10px; /* Shift the nav links a bit to the right */
+  }
+}
+
+ @media screen and (max-width: 380px) {
+  .navbar-badge {
+    width: 80px; /* Adjust badge size for this range */
+  }
+  .brand-text {
+    line-height: 0.7; /* Reduce line height for smaller screens */
+  }
+  .school-name {
+    font-size: 1rem; /* Reduce font size as needed */
+  }
+
+  .school-subname {
+    font-size: 1rem;
+  }
+
+  .school-motto {
+    font-size: 0.8rem;
   }
 }
 
@@ -1154,20 +1174,20 @@ body {
 /* Custom colors for each icon */
 .info_social a:nth-child(1) i {
   /* Facebook */
-  color: #3b5998;
+  color: #ffffff;
 }
 
 .info_social a:nth-child(2) i {
   /* YouTube */
-  color: #ff0000;
+  color: #ffffff;
 }
 
 .info_social a:nth-child(3) i {
   /* Instagram */
-  color: #e1306c;
+  color: #ffffff;
 }
 
 .info_social a:nth-child(4) i {
   /* TikTok */
-  color: #010101; /* Adjust TikTok color as needed */
+  color: #ffffff; /* Adjust TikTok color as needed */
 }
