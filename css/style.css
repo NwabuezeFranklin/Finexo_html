@@ -194,25 +194,47 @@ a:focus {
 }
 
 .school-name {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #000000;
 }
 
 .school-subname {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #000000;
 }
 
 .school-motto {
-  font-size: 1rem;
+  font-size: 2rem;
   color: rgb(0, 0, 0);
   font-style: italic;
 }
 
 /* Responsive Adjustments */
 @media screen and (max-width: 1350px) {
+  .navbar-badge {
+    width: 90px; /* Reduce badge size on mobile */
+    height: auto;
+  }
+
+  .brand-text {
+    line-height: 0.7; /* Reduce line height for smaller screens */
+  }
+
+  .school-name {
+    font-size: 1.5rem; /* Reduce font size for mobile screens */
+  }
+
+  .school-subname {
+    font-size: 1.3rem; /* Adjust subtitle font size */
+  }
+
+  .school-motto {
+    font-size: 1.5rem; /* Make the motto smaller */
+  }
+}
+@media screen and (max-width: 980px) {
   .navbar-badge {
     width: 120px; /* Reduce badge size on mobile */
     height: auto;
@@ -223,51 +245,54 @@ a:focus {
   }
 
   .school-name {
-    font-size: 1.2rem; /* Reduce font size for mobile screens */
+    font-size: 2rem; /* Reduce font size for mobile screens */
   }
 
   .school-subname {
-    font-size: 1rem; /* Adjust subtitle font size */
+    font-size: 2rem; /* Adjust subtitle font size */
   }
 
   .school-motto {
-    font-size: 0.8rem; /* Make the motto smaller */
+    font-size: 1.5rem; /* Make the motto smaller */
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar-badge {
+    width: 120px; /* Further reduce the badge size for very small screens */
+  }
+  .brand-text {
+    line-height: 0.8; /* Reduce line height for smaller screens */
+  }
+  .school-name {
+    font-size: 2rem; /* Further reduce font size */
+  }
+
+  .school-subname {
+    font-size: 1.5rem;
+  }
+
+  .school-motto {
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .navbar-badge {
-    width: 100px; /* Further reduce the badge size for very small screens */
+    width: 120px; /* Adjust badge size for this range */
   }
-
+  .brand-text {
+    line-height: 0.5; /* Reduce line height for smaller screens */
+  }
   .school-name {
-    font-size: 1rem; /* Further reduce font size */
+    font-size: 1.5rem; /* Reduce font size as needed */
   }
 
   .school-subname {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
 
   .school-motto {
-    font-size: 0.7rem;
-  }
-}
-
-@media screen and (min-width: 349px) and (max-width: 479px) {
-  .navbar-badge {
-    width: 80px; /* Adjust badge size for this range */
-  }
-
-  .school-name {
-    font-size: 0.9rem; /* Reduce font size as needed */
-  }
-
-  .school-subname {
-    font-size: 0.8rem;
-  }
-
-  .school-motto {
-    font-size: 0.6rem;
+    font-size: 1.3rem;
   }
 
   /* Adjust navbar links spacing if needed */
@@ -297,12 +322,20 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 5px 10px;
+  padding: 3px 7px;
   color: #000000;
   text-align: center;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 1px;
   transition: all 0.3s;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1310px) {
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 10px; /* Adjust the padding for smaller screens */
+    font-size: 14px; /* Adjust the font size */
+  }
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link,
@@ -334,7 +367,7 @@ shifting the toggle button from far right  */
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: absolute;
-  right: 50px;
+  right: 10px;
 }
 
 .custom_nav-container .navbar-toggler span {
