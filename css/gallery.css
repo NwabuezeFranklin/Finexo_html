@@ -71,3 +71,23 @@
   max-height: 90px; /* Ensures consistent text length */
   overflow: hidden;
 }
+
+.photo-collage {
+  width: 100%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  overflow: hidden; /* Prevents overflow issues */
+  text-align: center; /* Center images in a simplified way */
+}
+
+.photo-collage img {
+  display: inline-block;
+  width: 30%; /* Adjust for the size of the collage, three images per row */
+  margin: 1%; /* Space between images */
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.photo-collage img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
