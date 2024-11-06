@@ -594,13 +594,11 @@ end of news event section home page */
 } */
 /* Background color on hover */
 
-/* 
-Affiliations Section CSS */
-
 .affiliation-section {
   padding: 50px 20px;
   background-color: #f5f5f5;
   text-align: center;
+  overflow: hidden; /* Hides any content that goes outside the section */
 }
 
 .affiliation-section h2 {
@@ -611,45 +609,53 @@ Affiliations Section CSS */
 
 .affiliation-logos {
   display: flex;
-  justify-content: center;
-  gap: 30px; /* Adjusted gap for spacing */
-  flex-wrap: nowrap; /* Prevent wrapping to maintain horizontal layout */
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  overflow: hidden; /* Ensures content outside the container is not shown */
+  position: relative;
+}
+
+.affiliation-track {
+  display: flex;
+  gap: 30px; /* Spacing between logos */
+  animation: scroll-logos 20s linear infinite;
 }
 
 .affiliation-item {
-  max-width: 150px;
-  text-align: center;
+  flex: 0 0 auto; /* Prevents shrinking or growing */
 }
 
 .affiliation-item img {
-  width: 100%; /* Changed to maintain aspect ratio */
-  height: auto;
-  max-width: 200px; /* Limit the width for smaller images */
-  margin-bottom: 10px;
+  width: 400px; /* Adjust the size of the logos */
+  height: auto; /* Maintain the aspect ratio */
 }
 
-.affiliation-item-apen img {
-  width: 100%;
-  height: auto;
-  max-width: 100px; /* Limit the width for smaller images */
-  margin-bottom: 10px;
+.affiliation-item1 img {
+  width: 200px; /* Adjust the size of the logos */
+  height: auto; /* Maintain the aspect ratio */
+}
+@keyframes scroll-logos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(
+      -50%
+    ); /* Moves the logos half the width of the container */
+  }
 }
 
-/* Responsive Styling */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .affiliation-section h2 {
-    font-size: 28px; /* Smaller heading on mobile */
+    font-size: 28px; /* Smaller heading on mobile screens */
   }
 
-  .affiliation-item {
-    max-width: 200px; /* Smaller item width on mobile */
+  .affiliation-item img {
+    width: 300px; /* Smaller logo size on mobile screens */
   }
-
-  .affiliation-item-apen img {
-    width: 100%;
-    height: auto;
-    max-width: 100px; /* Limit the width for smaller images */
-    margin-bottom: 10px;
+  .affiliation-item1 img {
+    width: 150px; /* Smaller logo size on mobile screens */
+  }
+  .affiliation-track {
+    gap: 20px; /* Reduce the gap between logos on smaller screens */
   }
 }
