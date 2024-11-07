@@ -177,13 +177,13 @@ a:focus {
 .navbar-brand {
   display: flex;
   align-items: center;
-  padding-left: 15px;
 }
 
 .navbar-badge {
-  width: 150px; /* Keep the badge size */
-  height: 180px; /* Maintain aspect ratio */
-  margin-right: 10px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: -50px; /* Adjust this value to move it the badge to the left */
 }
 
 .brand-text {
@@ -191,22 +191,23 @@ a:focus {
   flex-direction: column;
   justify-content: center;
   line-height: 0.7;
+  margin-left: -30px;
 }
 
 .school-name {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #000000;
 }
 
 .school-subname {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #000000;
 }
 
 .school-motto {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(0, 0, 0);
   font-style: italic;
 }
@@ -214,8 +215,11 @@ a:focus {
 /* Responsive Adjustments */
 @media screen and (max-width: 1350px) {
   .navbar-badge {
-    width: 150px; /* Reduce badge size on mobile */
+    width: 150px;
     height: 150px;
+    transform: translateX(
+      30px
+    ); /* Adjust the value as needed moves it to the left  no it rather moves the school name and title and motto closer to the logo*/
   }
 
   .brand-text {
@@ -258,7 +262,7 @@ a:focus {
 }
 @media screen and (max-width: 600px) {
   .navbar-badge {
-    width: 120px; /* Further reduce the badge size for very small screens */
+    width: 130px; /* Further reduce the badge size for very small screens */
   }
   .brand-text {
     line-height: 0.8; /* Reduce line height for smaller screens */
@@ -278,7 +282,7 @@ a:focus {
 
 @media screen and (max-width: 480px) {
   .navbar-badge {
-    width: 100px; /* Adjust badge size for this range */
+    width: 120px; /* Adjust badge size for this range */
   }
   .brand-text {
     line-height: 0.7; /* Reduce line height for smaller screens */
@@ -303,8 +307,29 @@ a:focus {
 
 @media screen and (max-width: 380px) {
   .navbar-badge {
-    width: 80px; /* Adjust badge size for this range */
+    width: 110px; /* Adjust badge size for this range */
     height: 100px;
+  }
+  .brand-text {
+    line-height: 0.7; /* Reduce line height for smaller screens */
+  }
+  .school-name {
+    font-size: 1rem; /* Reduce font size as needed */
+  }
+
+  .school-subname {
+    font-size: 1rem;
+  }
+
+  .school-motto {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .navbar-badge {
+    width: 80px; /* Adjust badge size for this range */
+    height: 80px;
   }
   .brand-text {
     line-height: 0.7; /* Reduce line height for smaller screens */
@@ -883,7 +908,7 @@ body {
 }
 
 .welcome_message_heading {
-  color: rgb(239, 79, 5);
+  color: #ff8c00;
 }
 
 /* Add the blurred background image */
