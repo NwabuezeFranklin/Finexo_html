@@ -182,7 +182,7 @@ a:focus {
 
 .navbar-badge {
   width: 150px; /* Keep the badge size */
-  height: auto; /* Maintain aspect ratio */
+  height: 180px; /* Maintain aspect ratio */
   margin-right: 10px;
 }
 
@@ -214,8 +214,8 @@ a:focus {
 /* Responsive Adjustments */
 @media screen and (max-width: 1350px) {
   .navbar-badge {
-    width: 90px; /* Reduce badge size on mobile */
-    height: auto;
+    width: 150px; /* Reduce badge size on mobile */
+    height: 150px;
   }
 
   .brand-text {
@@ -236,8 +236,8 @@ a:focus {
 }
 @media screen and (max-width: 980px) {
   .navbar-badge {
-    width: 120px; /* Reduce badge size on mobile */
-    height: auto;
+    width: 130px; /* Reduce badge size on mobile */
+    height: 130px;
   }
 
   .brand-text {
@@ -278,7 +278,7 @@ a:focus {
 
 @media screen and (max-width: 480px) {
   .navbar-badge {
-    width: 80px; /* Adjust badge size for this range */
+    width: 100px; /* Adjust badge size for this range */
   }
   .brand-text {
     line-height: 0.7; /* Reduce line height for smaller screens */
@@ -301,9 +301,10 @@ a:focus {
   }
 }
 
- @media screen and (max-width: 380px) {
+@media screen and (max-width: 380px) {
   .navbar-badge {
     width: 80px; /* Adjust badge size for this range */
+    height: 100px;
   }
   .brand-text {
     line-height: 0.7; /* Reduce line height for smaller screens */
