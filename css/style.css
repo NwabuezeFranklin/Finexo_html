@@ -157,7 +157,7 @@ a:focus {
 
 /* Custom Navbar Styling */
 .custom_nav-container {
-  padding: 0;
+  padding: 10px 0; /* Adjust the padding as needed to reduce height */
   margin: 0; /* Ensure no margins on the sides */
   width: 100vw; /* Span the full width of the viewport */
   background-color: #ffee6b;
@@ -167,6 +167,7 @@ a:focus {
   left: 0 !important;
   right: 0;
   z-index: 999;
+  height: auto; /* Remove if you've set a specific height before */
 }
 
 /* Stretch the navbar content to the full width */
@@ -181,9 +182,10 @@ a:focus {
 
 .navbar-badge {
   width: 150px;
-  height: 150px;
+  height: 130px;
   position: relative;
-  left: -50px; /* Adjust this value to move it the badge to the left */
+  left: -43px; /* Adjust this value to move it the badge to the left */
+  top: -15px;
 }
 
 .brand-text {
@@ -213,10 +215,10 @@ a:focus {
 }
 
 /* Responsive Adjustments */
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1950px) {
   .navbar-badge {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     transform: translateX(
       30px
     ); /* Adjust the value as needed moves it to the left  no it rather moves the school name and title and motto closer to the logo*/
