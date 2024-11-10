@@ -157,7 +157,7 @@ a:focus {
 
 /* Custom Navbar Styling */
 .custom_nav-container {
-  padding: 10px 0; /* Adjust the padding as needed to reduce height */
+  padding: 5px 0; /* Adjust the padding as needed to reduce height */
   margin: 0; /* Ensure no margins on the sides */
   width: 100vw; /* Span the full width of the viewport */
   background-color: #ffee6b;
